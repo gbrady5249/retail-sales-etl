@@ -74,7 +74,7 @@ retail-sales-etl/
 
 ## Data Source
 
-This project uses the **Online Retail** dataset from the UCI Machine Learning Repository.
+This project uses the [Online Retail dataset](https://archive.ics.uci.edu/dataset/352/online+retail) from the UCI Machine Learning Repository.
 
 The dataset contains transactional data from a UK-based online retailer and includes:
 
