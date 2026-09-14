@@ -36,6 +36,31 @@ SQL Analytics
 
 The pipeline is orchestrated by `src/run_pipeline.py`, which executes each stage in order and stops if a step fails.
 
+## Repository Structure
+
+```text
+retail-sales-etl/
+├── data/
+│   ├── raw/                     # Raw source data (excluded from Git)
+│   └── processed/               # Generated cleaned data (excluded from Git)
+├── sql/
+│   ├── analysis_queries.sql     # SQL queries for business analysis
+│   └── create_tables.sql        # PostgreSQL table schema
+├── src/
+│   ├── investigate_data.py      # Source data investigation
+│   ├── load_database.py         # PostgreSQL bulk loading
+│   ├── profile_data.py          # Initial data profiling
+│   ├── run_pipeline.py          # End-to-end pipeline orchestrator
+│   ├── setup_database.py        # PostgreSQL schema setup
+│   ├── transform_data.py        # Data cleaning and transformation
+│   └── validate_data.py         # Automated data quality checks
+├── .env.example                 # Environment variable template
+├── .gitignore                   # Files excluded from version control
+├── data_dictionary.md           # Dataset field definitions
+├── README.md                    # Project documentation
+└── requirements.txt             # Python dependencies
+```
+
 ## Technologies
 
 - **Python** — pipeline orchestration and ETL logic
