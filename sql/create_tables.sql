@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS retail_transactions;
+
 CREATE TABLE retail_transactions (
     invoice_no VARCHAR(20),
     stock_code VARCHAR(20),

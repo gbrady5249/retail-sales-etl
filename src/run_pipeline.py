@@ -20,6 +20,7 @@ def main():
 
     run_step("transform_data.py")
     run_step("validate_data.py")
+    run_step("setup_database.py")
     run_step("load_database.py")
 
     print("\n===================================")
