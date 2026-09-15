@@ -13,11 +13,11 @@ def main():
     load_dotenv()
 
     connection = psycopg.connect(
-        dbname="retail_sales",
-        user="postgres",
+        dbname=os.getenv("POSTGRES_DB"),
+        user=os.getenv("POSTGRES_USER"),
         password=os.getenv("POSTGRES_PASSWORD"),
-        host="localhost",
-        port="5432",
+        host=os.getenv("POSTGRES_HOST"),
+        port=os.getenv("POSTGRES_PORT"),
     )
 
     print("✅ Connected to PostgreSQL")
