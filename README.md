@@ -153,11 +153,23 @@ pip install -r requirements.txt
 
 ### 2. Configure PostgreSQL credentials
 
-Create a `.env` file in the project root:
+Copy the provided `.env.example` file to create your local `.env` file:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+The environment file contains the PostgreSQL connection settings:
 
 ```text
+POSTGRES_DB=retail_sales
+POSTGRES_USER=postgres
 POSTGRES_PASSWORD=your_postgresql_password
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
 ```
+
+Replace `your_postgresql_password` with your local PostgreSQL password.
 
 The `.env` file is excluded from Git through `.gitignore` so database credentials are not committed to the repository.
 
